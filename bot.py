@@ -31,5 +31,11 @@ def enviar_mensagem(chat_id, texto):
 def root():
     return "Bot ativo!"
 
+if __name__ == "__main__":
+    import os
+    port = int(os.environ.get("PORT", 5000))  # Railway define a PORT automaticamente
+    app.run(host="0.0.0.0", port=port)
+
+
 
 
