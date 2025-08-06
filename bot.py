@@ -4,8 +4,8 @@ import os
 
 app = Flask(__name__)
 
-TOKEN = os.environ.get("8384962152:AAE-U5ItxVzrVNPeZQncEDe5XhbS5jBzO9I")
-TEXTO_CHAVE = os.environ.get("TEXTO_CHAVE", "cupom")
+TOKEN = os.environ.get("BOT_TOKEN")
+TEXTO_CHAVE = os.environ.get("TEXTO_CHAVE", "importante")
 
 TELEGRAM_API_URL = f"https://api.telegram.org/bot{TOKEN}"
 
@@ -30,5 +30,6 @@ def enviar_mensagem(chat_id, texto):
 @app.route("/", methods=["GET"])
 def root():
     return "Bot ativo!"
+
 
 
